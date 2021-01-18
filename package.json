@@ -4,7 +4,8 @@
   "description": "This project has been created using **webpack scaffold**, you can now run",
   "main": "webpack.config.js",
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -31,9 +32,8 @@
     "prebuild": "rimraf dist/",
     "build": "webpack",
     "watch": "webpack --watch",
-    "serve": "webpack serve --open",
-    "visualize": "source-map-explorer dist/*.js --no-border-checks",
-    "explore": "a",
+    "serve": "webpack serve --open --env rm1=100 rm2='abc'",
+    "explore": "source-map-explorer dist/*.js --no-border-checks",
     "express": "node ExpressServer/server.js"
   },
   "repository": {

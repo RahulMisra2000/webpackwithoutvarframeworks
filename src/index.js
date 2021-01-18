@@ -6,6 +6,7 @@ import j from "./staticdata/1.json";
 import c from "./staticdata/1.csv";
 import x from "./staticdata/1.xml";
 import printMe from "./print";
+import { v4 as uuidv4 } from "uuid";
 
 import(/* webpackPrefetch: true */ "./rmprefetch.js");
 import(/* webpackPreload: true */ "./rmpreload.js");
@@ -91,3 +92,5 @@ while (true) {
   }
 }
 console.log("d");
+
+console.log(uuidv4());
