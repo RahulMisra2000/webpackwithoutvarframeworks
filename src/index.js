@@ -86,7 +86,7 @@ console.log("c");
 
 let sTime = new Date().getSeconds();
 while (true) {
-  if (new Date().getSeconds() - sTime > 10) {
+  if (new Date().getSeconds() - sTime > 2) {
     break;
   }
 }
