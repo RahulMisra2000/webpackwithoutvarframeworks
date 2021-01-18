@@ -2,10 +2,31 @@
   "name": "webpackbabelproject",
   "version": "1.0.0",
   "description": "This project has been created using **webpack scaffold**, you can now run",
-  "main": "webpack.config.js",
-  "dependencies": {
-    "lodash": "^4.17.20",
-    "uuid": "^8.3.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulMisra2000/webpackwithoutvarframeworks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RahulMisra2000/webpackwithoutvarframeworks/issues"
+  },
+  "homepage": "https://github.com/RahulMisra2000/webpackwithoutvarframeworks#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleandist": "rimraf dist/",
+    "prebuild": "npm run cleandist",
+    "prebuild:dev": "npm run cleandist",
+    "prebuild:prod": "npm run cleandist",
+    "build": "npm run build:dev",
+    "build:dev": "webpack --env rm1=dev",
+    "build:prod": "webpack --env rm1=prod",
+    "watch": "webpack --watch",
+    "serve:dev": "webpack serve --open --env rm1=dev",
+    "serve:prod": "webpack serve --open --env rm1=prod",
+    "explore": "source-map-explorer dist/*.js --no-border-checks",
+    "express": "node ExpressServer/server.js"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -27,24 +48,8 @@
     "xml-loader": "^1.2.1",
     "yamljs": "^0.3.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rimraf dist/",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "serve": "webpack serve --open --env rm1=100 rm2='abc'",
-    "explore": "source-map-explorer dist/*.js --no-border-checks",
-    "express": "node ExpressServer/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RahulMisra2000/webpackwithoutvarframeworks.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RahulMisra2000/webpackwithoutvarframeworks/issues"
-  },
-  "homepage": "https://github.com/RahulMisra2000/webpackwithoutvarframeworks#readme"
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "uuid": "^8.3.2"
+  }
 }
