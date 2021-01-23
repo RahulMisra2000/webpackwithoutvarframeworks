@@ -26,6 +26,11 @@ let prodConfigObject = {
     filename: "[name].[contenthash].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
+
+  externals: {
+    jquery: "jQuery",
+  },
+
   devtool: "source-map",
 
   plugins: [
@@ -123,6 +128,7 @@ module.exports = (env) => {
       "Running myconfiguration in *** PRODUCTION MODE *** webpack.config.js"
     );
     prodConfigObject.mode = "production";
+    delete prodConfigObject.devtool;
 
     return prodConfigObject;
   } else {
@@ -134,7 +140,6 @@ module.exports = (env) => {
 
     prodConfigObject.mode = "development";
     delete prodConfigObject.optimization;
-    delete prodConfigObject.devtool;
     prodConfigObject.output.filename = "[name].bundle.js";
 
     return prodConfigObject;

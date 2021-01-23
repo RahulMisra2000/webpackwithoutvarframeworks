@@ -11,6 +11,15 @@ import { v4 as uuidv4 } from "uuid";
 import(/* webpackPrefetch: true */ "./rmprefetch.js");
 import(/* webpackPreload: true */ "./rmpreload.js");
 
+console.log(new Date().toTimeString());
+let sTime1 = new Date().getSeconds();
+while (true) {
+  if (new Date().getSeconds() - sTime1 > 5) {
+    break;
+  }
+}
+console.log(new Date().toTimeString());
+
 console.log(j);
 console.log(c);
 console.log(x);

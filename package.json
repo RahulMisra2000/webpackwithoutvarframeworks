@@ -26,8 +26,11 @@
     "serve:dev": "webpack serve --open --env rm1=dev",
     "serve:prod": "webpack serve --open --env rm1=prod",
     "explore": "source-map-explorer dist/*.js --no-border-checks",
-    "express": "node ExpressServer/server.js"
+    "express": "node ExpressServer/server.js",
+    "build:dockerimage": "docker build -t image1:1.0 --build-arg PORT=10000 .",
+    "startcontainer": "docker run -dp 10000:10000 -v rmnv1:/app/data --name cont1 image1:1.0"
   },
+  "//": "['These are just comments', I think webpack builds the project and webpack serve builds and then starts the webpack dev server'  ]",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
